@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.LowStockController">
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right, #020f1f, #1b2738); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);">
+         <children>
+            <Label layoutX="310.0" layoutY="38.0" text="Уведомления" textFill="#f7f5f5">
+               <font>
+                  <Font name="Century Gothic Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lowStockLabel" layoutX="338.0" layoutY="237.0" prefHeight="106.0" prefWidth="341.0" text="Label" />
+   </children>
+</AnchorPane>

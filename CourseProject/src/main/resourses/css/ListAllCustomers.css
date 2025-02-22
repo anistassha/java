@@ -1,0 +1,25 @@
+.table-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+    -fx-border-color: linear-gradient(to bottom right, #dc8967, #dfb649);
+    -fx-border-radius: 8px; /* Закругленные углы для всей таблицы */
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #dc8967, #dfb649);
+    /* -fx-background-color: linear-gradient(to bottom right, #9370DB, #FF69B4);*/ /* Градиент от лилового к розовому */
+    -fx-background-radius: 8px 8px 0 0; /* Закругленные углы сверху */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Цвет текста заголовков */
+    -fx-font-weight: bold; /* Жирный текст */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-alignment: center; /* Центрирование текста */
+}
+
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}

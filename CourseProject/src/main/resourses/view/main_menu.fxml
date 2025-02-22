@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1197.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MainMenuController">
+    <AnchorPane fx:id="paneLeft" minWidth="200.0" prefHeight="700.0" prefWidth="298.0" style="-fx-background-color: #020f1f;">
+        <children>
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="36.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/LogoWithoutText.png" />
+                </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="154.0" layoutY="28.0" prefHeight="21.0" prefWidth="100.0" text="POWER" textFill="WHITE">
+                <font>
+                    <Font name="Century Gothic Bold" size="25.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="154.0" layoutY="60.0" prefHeight="21.0" prefWidth="100.0" text="HOUSE" textFill="WHITE">
+                <font>
+                    <Font name="Century Gothic Bold" size="25.0" />
+                </font>
+            </Label>
+            <Line endX="314.2" layoutX="-15.0" layoutY="127.0" startX="14.5" stroke="WHITE" />
+
+            <AnchorPane fx:id="paneMenuHolder" layoutX="27.0" layoutY="136.0" prefHeight="564.0" prefWidth="245.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="136.0">
+                <children>
+                    <Button fx:id="btnDashboard" layoutX="8.0" layoutY="26.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Главная">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnInventoryItem" layoutX="8.0" layoutY="76.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Товары">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnCustomers" layoutX="8.0" layoutY="126.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Покупатели">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnSells" layoutX="8.0" layoutY="176.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Продажи">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnReports" layoutX="8.0" layoutY="276.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Отчёты">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnAccounts" layoutX="8.0" layoutY="326.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Сотрудники">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnMyAccount" layoutX="8.0" layoutY="226.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Мой аккаунт">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <AnchorPane fx:id="paneAccountSection" layoutX="8.0" layoutY="449.0" prefHeight="109.0" prefWidth="220.0">
+                        <children>
+                            <Label layoutX="10.0" layoutY="10.0" text="Logged in as:" textFill="WHITE" />
+                            <Label fx:id="lblUsername" layoutX="10.0" layoutY="30.0" text="Username" textFill="#00ff22" />
+                            <Label layoutX="10.0" layoutY="50.0" text="Access Level:" textFill="WHITE" />
+                            <Label fx:id="lblAccessLevel" layoutX="10.0" layoutY="70.0" text="Level" textFill="#00ff22" />
+                            <Button fx:id="btnLogout" layoutX="140.0" layoutY="70.0" onAction="#logOut" prefWidth="70.0" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;" text="Выйти">
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Button>
+                        </children>
+                    </AnchorPane>
+               <Button fx:id="btnLowStock" disable="true" layoutX="8.0" layoutY="376.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Уведомления" visible="false">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <ImageView fx:id="lowStock_img" disable="true" fitHeight="32.0" fitWidth="27.0" layoutX="190.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <image>
+                     <Image url="@../images/lowQuantity.png" />
+                  </image>
+               </ImageView>
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+
+    <AnchorPane fx:id="paneRight" layoutX="298.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+    </AnchorPane>
+</AnchorPane>

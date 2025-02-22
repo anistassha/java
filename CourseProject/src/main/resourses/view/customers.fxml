@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.CustomersController">
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="900.0" style="-fx-background-color: #020f1f; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);">
+         <children>
+            <Label layoutX="326.0" layoutY="38.0" text="Покупатели" textFill="#f7f5f5">
+               <font>
+                  <Font name="Century Gothic Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="104.0" layoutY="280.0" text="Имя:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_customerName" layoutX="154.0" layoutY="272.0" prefHeight="40.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="59.0" layoutY="341.0" text="Фамилия:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_customerSurname" layoutX="154.0" layoutY="333.0" prefHeight="40.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="60.0" layoutY="441.0" prefHeight="18.0" prefWidth="134.0" text="Телефон:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_customerNumber" layoutX="154.0" layoutY="433.0" prefHeight="40.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="89.0" layoutY="502.0" text="Почта:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_customerEmail" layoutX="154.0" layoutY="494.0" prefHeight="40.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="customers_customerSexM" layoutX="163.0" layoutY="391.0" mnemonicParsing="false" text="Мужской">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="customers_customerSexW" layoutX="273.0" layoutY="391.0" mnemonicParsing="false" text="Женский">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="108.0" layoutY="392.0" text="Пол:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="452.0" layoutY="158.0" orientation="VERTICAL" prefHeight="487.0" prefWidth="10.0" />
+      <Button fx:id="customers_btnLeft" layoutX="49.0" layoutY="555.0" mnemonicParsing="false" onAction="#goToPreviousCustomer" prefHeight="71.0" prefWidth="70.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 5, 5);;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="customers_btnRight" layoutX="336.0" layoutY="555.0" mnemonicParsing="false" onAction="#goToNextCustomer" prefHeight="71.0" prefWidth="70.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: #fff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 5, 5);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="customers_btnAdd" layoutX="144.0" layoutY="555.0" mnemonicParsing="false" onAction="#addNewCustomer" prefHeight="71.0" prefWidth="70.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: #fff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 5, 5);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="customers_btnSave" layoutX="242.0" layoutY="555.0" mnemonicParsing="false" onAction="#customers_saveAction" prefHeight="71.0" prefWidth="70.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: #fff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 5, 5);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="65.0" layoutY="572.0" onMouseClicked="#goToPreviousCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/strelka_left.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="350.0" layoutY="569.0" onMouseClicked="#goToNextCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/strelka_right.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="customers_image_addBtn" fitHeight="40.0" fitWidth="39.0" layoutX="160.0" layoutY="571.0" onMouseClicked="#addNewCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/add.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="256.0" layoutY="571.0" onMouseClicked="#customers_saveAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/save.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="144.0" prefHeight="42.0" prefWidth="172.0" text="Навигация" textFill="#37acb4" underline="true">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="500.0" layoutY="144.0" prefHeight="42.0" prefWidth="172.0" text="Действия" textFill="#37acb4" underline="true">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="222.0" text="ID:">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_customerID" disable="true" layoutX="154.0" layoutY="214.0" prefHeight="40.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="customers_labelShowOf" layoutX="332.0" layoutY="645.0" text="Показан n из m ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customers_search" layoutX="560.0" layoutY="201.0" prefHeight="42.0" prefWidth="214.0" promptText=" Поиск по ID/фамилии" style="-fx-background-radius: 8px;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="customers_btnSearch" layoutX="775.0" layoutY="196.0" mnemonicParsing="false" onAction="#customers_btnSearchAction" prefHeight="52.0" prefWidth="49.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: #fff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 5, 5);" textFill="#ddcceb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fx:id="customers_searchImg" fitHeight="30.0" fitWidth="30.0" layoutX="785.0" layoutY="207.0" onMouseClicked="#customers_btnSearchAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/search.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="customers_btnAllCustomers" layoutX="586.0" layoutY="389.0" mnemonicParsing="false" onAction="#showAllCustomers" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: #26c917; -fx-background-radius: 8px; -fx-text-fill: #fff;" text="Все покупатели" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="customers_btnDelete" layoutX="586.0" layoutY="468.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: red; -fx-background-radius: 8px; -fx-text-fill: #fff;" text="Удалить " textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="customers_btnRurchases" layoutX="586.0" layoutY="307.0" mnemonicParsing="false" onAction="#showPurchases" prefHeight="52.0" prefWidth="205.0" style="-fx-background-color: #37acb4; -fx-background-radius: 8px; -fx-text-fill: #fff;" text="Покупки" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="42.0" fitWidth="50.0" layoutX="592.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/purchases.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="580.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/musor.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="customers_backBtn" layoutX="144.0" layoutY="555.0" mnemonicParsing="false" onAction="#customers_turnBack" prefHeight="71.0" prefWidth="70.0" style="-fx-background-radius: 35px; -fx-border-radius: 35px; -fx-background-color: #fff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 5, 5);" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="customers_image_backBtn" fitHeight="52.0" fitWidth="50.0" layoutX="154.0" layoutY="566.0" onMouseClicked="#customers_turnBack" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/back_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="customers_searchLbl" alignment="CENTER" layoutX="576.0" layoutY="239.0" prefHeight="30.0" prefWidth="192.0" textAlignment="CENTER" textFill="#ff8000">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="customers_krestImg" fitHeight="26.0" fitWidth="42.0" layoutX="779.0" layoutY="210.0" onMouseClicked="#customers_btnSearchAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/krest.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

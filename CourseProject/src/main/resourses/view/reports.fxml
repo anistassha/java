@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #03152d, #1c2b44);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.ReportsController">
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right, #020f1f, #1b2738); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);">
+         <children>
+            <Label layoutX="370.0" layoutY="38.0" text="Отчёты" textFill="#f7f5f5">
+               <font>
+                  <Font name="Century Gothic Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="35.0" layoutY="213.0" prefHeight="326.0" prefWidth="404.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <LineChart fx:id="reports_lineChart" layoutX="-1.6" layoutY="3.0" legendVisible="false" prefHeight="290.0" prefWidth="398.0" title="Прибыль " AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="8.0">
+               <xAxis>
+                  <CategoryAxis fx:id="reports_dateAxis" animated="false" prefHeight="10.0" prefWidth="320.0" side="BOTTOM" tickLabelGap="20.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="reports_amountAxis" label="Сумма прибыли" side="LEFT" />
+               </yAxis>
+            </LineChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="458.0" layoutY="213.0" prefHeight="326.0" prefWidth="404.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <BarChart fx:id="reports_barChart" layoutX="-3.0" layoutY="2.0" prefHeight="326.0" prefWidth="404.0" title="Количество проданных товаров">
+              <xAxis>
+                <CategoryAxis fx:id="reports_dateAxis_qua" prefHeight="29.0" prefWidth="326.0" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="reports_quantityAxis" label="Количество" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ccd7eb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.CustomerPurchaseController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="47.0" prefHeight="320.0" prefWidth="644.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <TableView fx:id="customerPurchase_tableView" layoutX="16.0" layoutY="14.0" prefHeight="289.0" prefWidth="612.0" style="-fx-padding: 0px; -fx-border-radius: 8px; -fx-border-width: 2px; -fx-background-radius: 8px;" stylesheets="@../css/CustomerPurchases.css">
+               <columns>
+                  <TableColumn fx:id="customerPurchase_col_purchaseId" prefWidth="96.8000259399414" text="ID покупки" />
+                  <TableColumn fx:id="customerPurchase_col_productId" prefWidth="90.4000244140625" text="ID товара" />
+                  <TableColumn fx:id="customerPurchase_col_date" prefWidth="112.79998779296875" text="Дата" />
+                  <TableColumn fx:id="customerPurchase_col_quantity" prefWidth="115.20001220703125" text="Количество" />
+                  <TableColumn fx:id="customerPurchase_col_amount" prefWidth="87.99996948242188" text="Сумма" />
+                  <TableColumn fx:id="customerPurchase_col_employee" prefWidth="111.199951171875" text="Сотрудник" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="69.0" layoutY="392.0" prefHeight="63.0" prefWidth="206.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" text="Количество покупок:">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cp_countPurchases" alignment="CENTER" layoutX="170.0" layoutY="18.0" prefHeight="32.0" prefWidth="8.0" textAlignment="CENTER" textFill="#5e77ff">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="340.0" layoutY="392.0" prefHeight="63.0" prefWidth="288.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" text="Общая сумма:">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cp_totalAmount" alignment="CENTER" layoutX="117.0" layoutY="16.0" prefHeight="32.0" prefWidth="156.0" textAlignment="CENTER" textFill="#5e77ff">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

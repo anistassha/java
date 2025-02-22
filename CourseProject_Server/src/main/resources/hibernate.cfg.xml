@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/course_project
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            password
+        </property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <property name="current_session_context_class">thread</property>
+
+        <mapping class="org.example.Entities.Employee"/>
+        <mapping class="org.example.Entities.Product"/>
+        <mapping class="org.example.Entities.Customer"/>
+        <mapping class="org.example.Entities.Purchase"/>
+        <mapping class="org.example.Entities.PersonData"/>
+
+    </session-factory>
+</hibernate-configuration>

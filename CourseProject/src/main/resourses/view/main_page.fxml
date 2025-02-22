@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #03152d, #1c2b44);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MainPageController">
+    <children>
+        <AnchorPane prefHeight="127.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right, #020f1f, #1b2738); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);">
+            <children>
+                <Label layoutX="368.0" layoutY="38.0" text="Главная" textFill="#f7f5f5">
+                    <font>
+                        <Font name="Century Gothic Bold" size="41.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="372.0" layoutY="229.0" prefHeight="282.0" prefWidth="450.0" style="-fx-background-color: linear-gradient(to bottom, #1a2940, #3a5068); -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0, 0, 2);">
+            <children>
+                <Label layoutX="207.0" layoutY="52.0" prefHeight="52.0" prefWidth="51.0" style="-fx-effect: dropshadow(gaussian, rgba(0,255,255,0.4), 2, 0.5, 0, 0);" text="BYN" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="42.0" layoutY="65.0" text="USD" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="24.0" fitWidth="82.0" layoutX="96.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/usd.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="82.0" layoutX="258.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/belarus.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="322.0" layoutY="63.0" text=":" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label_usdToByn" layoutX="348.0" layoutY="64.0" prefHeight="27.0" prefWidth="80.0" text="Label" textFill="#a1ffaf">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                </Label>
+                <Label layoutX="207.0" layoutY="117.0" prefHeight="52.0" prefWidth="51.0" text="RUB" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="42.0" layoutY="130.0" text="USD" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="24.0" fitWidth="82.0" layoutX="96.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/usd.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="154.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/strelka_white.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="81.0" layoutX="258.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/russia.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="322.0" layoutY="128.0" text=":" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label_usdToRub" layoutX="348.0" layoutY="129.0" prefHeight="27.0" prefWidth="80.0" text="Label" textFill="#a1ffaf">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                </Label>
+                <Label layoutX="207.0" layoutY="182.0" prefHeight="52.0" prefWidth="51.0" text="EUR" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="42.0" layoutY="195.0" text="USD" textFill="WHITE">
+                    <font>
+                        <Font name="Century" size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="24.0" fitWidth="82.0" layoutX="96.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/usd.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="65.0" layoutX="260.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/euro.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="322.0" layoutY="193.0" text=":" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label_usdToEur" layoutX="348.0" layoutY="194.0" prefHeight="27.0" prefWidth="80.0" text="Label" textFill="#a1ffaf">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="154.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/strelka_white.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="154.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/strelka_white.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="214.0" fitWidth="239.0" layoutX="90.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/converter.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

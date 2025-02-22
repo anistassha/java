@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #e7dbae;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.ListAllCustomersController">
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="900.0" style="-fx-background-color: #020f1f;">
+         <children>
+            <Label layoutX="326.0" layoutY="38.0" text="Покупатели" textFill="#f7f5f5">
+               <font>
+                  <Font name="Century Gothic Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="customers_back" layoutX="376.0" layoutY="614.0" mnemonicParsing="false" onAction="#backToCustomers" prefHeight="52.0" prefWidth="148.0" style="-fx-background-color: linear-gradient(to bottom right, #dc8967, #dfb649); -fx-background-radius: 8px; -fx-text-fill: #fff;" text="Назад">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="19.0" layoutY="136.0" prefHeight="458.0" prefWidth="862.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,00,0.4), 5,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;">
+         <children>
+            <TableView fx:id="customers_tableView" layoutX="27.0" layoutY="14.0" prefHeight="423.0" prefWidth="808.0" style="-fx-padding: 0px; -fx-border-radius: 8px; -fx-border-width: 2px; -fx-background-radius: 8px;" stylesheets="@../css/ListAllCustomers.css">
+               <columns>
+                  <TableColumn fx:id="customers_col_customerId" prefWidth="89.60000801086426" text="ID" />
+                  <TableColumn fx:id="customers_col_customerName" prefWidth="130.39998626708984" text="Имя" />
+                  <TableColumn fx:id="customers_col_customerSurname" prefWidth="129.5999755859375" text="Фамилия" />
+                  <TableColumn fx:id="customers_col_customerSex" prefWidth="125.5999755859375" text="Пол" />
+                  <TableColumn fx:id="customers_col_customerNumber" prefWidth="134.39999389648438" text="Телефон" />
+                  <TableColumn fx:id="customers_col_customerEmail" prefWidth="249.60001220703123" text="Почта" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
